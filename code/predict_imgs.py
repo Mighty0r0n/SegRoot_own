@@ -113,7 +113,8 @@ if __name__ == "__main__":
         print("{:.4f}s for one image".format(end_time - start_time))
     else:
         img_paths = args.data_dir.glob("*.jpg")
-        for img_path in img_paths:
+        img_paths2 = args.data_dir.glob("*.png")
+        for img_path in img_paths and img_paths2:
             start_time = time.time()
             predict_gen(model, img_path, args.thres, device, 8)
             end_time = time.time()

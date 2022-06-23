@@ -71,7 +71,7 @@ if __name__ == "__main__":
         )
     else:
         train_data = StaticTrainDataset(train_ids)
-        train_iter = DataLoader(train_data, batch_size=bs, num_workers=6, shuffle=True)
+        train_iter = DataLoader(train_data, batch_size=bs, num_workers=4, shuffle=True)
 
     train_tdata = TestDataset(train_ids)
     valid_tdata = TestDataset(valid_ids)
